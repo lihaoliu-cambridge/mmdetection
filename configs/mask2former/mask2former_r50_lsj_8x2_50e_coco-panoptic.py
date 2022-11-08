@@ -1,8 +1,8 @@
 _base_ = [
-    '../_base_/datasets/coco_panoptic.py', '../_base_/default_runtime.py'
+    '../_base_/datasets/coco_instance.py', '../_base_/default_runtime.py'
 ]
-num_things_classes = 80
-num_stuff_classes = 53
+num_things_classes = 10
+num_stuff_classes = 0
 num_classes = num_things_classes + num_stuff_classes
 model = dict(
     type='Mask2Former',
@@ -193,11 +193,11 @@ data = dict(
     train=dict(pipeline=train_pipeline),
     val=dict(
         pipeline=test_pipeline,
-        ins_ann_file=data_root + 'annotations/instances_val2017.json',
+        ins_ann_file=data_root + 'annotations/instances_test2017.json',
     ),
     test=dict(
         pipeline=test_pipeline,
-        ins_ann_file=data_root + 'annotations/instances_val2017.json',
+        ins_ann_file=data_root + 'annotations/instances_test2017.json',
     ))
 
 embed_multi = dict(lr_mult=1.0, decay_mult=0.0)

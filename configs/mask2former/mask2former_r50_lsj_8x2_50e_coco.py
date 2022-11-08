@@ -1,5 +1,5 @@
 _base_ = ['./mask2former_r50_lsj_8x2_50e_coco-panoptic.py']
-num_things_classes = 80
+num_things_classes = 10
 num_stuff_classes = 0
 num_classes = num_things_classes + num_stuff_classes
 model = dict(
@@ -68,12 +68,12 @@ data = dict(
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/instances_val2017.json',
-        img_prefix=data_root + 'val2017/',
+        ann_file=data_root + 'annotations/instances_test2017.json',
+        img_prefix=data_root + 'test2017/',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/instances_val2017.json',
-        img_prefix=data_root + 'val2017/',
+        ann_file=data_root + 'annotations/instances_test2017.json',
+        img_prefix=data_root + 'test2017/',
         pipeline=test_pipeline))
 evaluation = dict(metric=['bbox', 'segm'])
