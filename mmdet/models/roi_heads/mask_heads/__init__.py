@@ -2,6 +2,7 @@
 from .coarse_mask_head import CoarseMaskHead
 from .dynamic_mask_head import DynamicMaskHead
 from .fcn_mask_head import FCNMaskHead
+from .fcn_mask_head_ntm import FCNMaskHeadNTM
 from .feature_relay_head import FeatureRelayHead
 from .fused_semantic_head import FusedSemanticHead
 from .global_context_head import GlobalContextHead
@@ -16,5 +17,5 @@ __all__ = [
     'FCNMaskHead', 'HTCMaskHead', 'FusedSemanticHead', 'GridHead',
     'MaskIoUHead', 'CoarseMaskHead', 'MaskPointHead', 'SCNetMaskHead',
     'SCNetSemanticHead', 'GlobalContextHead', 'FeatureRelayHead',
-    'DynamicMaskHead'
+    'DynamicMaskHead', 'FCNMaskHeadNTM'
 ]
