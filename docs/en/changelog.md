@@ -1,5 +1,62 @@
 ## Changelog
 
+### v2.27.0 (5/1/2023)
+
+#### Highlights
+
+- Support receptive field search of CNN models([TPAMI 2022: RF-Next](http://mftp.mmcheng.net/Papers/22TPAMI-ActionSeg.pdf)) (#8191)
+
+#### Bug Fixes
+
+- Fix deadlock issue related with MMDetWandbHook (#9476)
+
+#### Improvements
+
+- Add minimum GitHub token permissions for workflows (#8928)
+- Delete compatible code for parrots in roi extractor (#9503)
+- Deprecate np.bool Type Alias (#9498)
+- Replace numpy transpose with torch permute to speed-up data pre-processing (#9533)
+
+#### Documents
+
+- Fix typo in docs/zh_cn/tutorials/config.md (#9416)
+- Fix Faster RCNN FP16 config link in README (#9366)
+
+#### Contributors
+
+A total of 12 developers contributed to this release.
+Thanks @Min-Sheng, @gasvn, @lzyhha, @jbwang1997, @zachcoleman, @chenyuwang814, @MilkClouds, @Fizzez, @boahc077, @apatsekin, @zytx121, @DonggeunYu
+
+### v2.26.0 (23/11/2022)
+
+#### Highlights
+
+- Support training on [NPU](docs/en/device/npu.md) (#9267)
+
+#### Bug Fixes
+
+- Fix RPN visualization (#9151)
+- Fix readthedocs by freezing the dependency versions (#9154)
+- Fix device argument error in MMDet_Tutorial.ipynb (#9112)
+- Fix solov2 cannot dealing with empty gt image (#9185)
+- Fix random flipping ratio comparison of mixup image (#9336)
+
+#### Improvements
+
+- Complement necessary argument of seg_suffix of cityscapes (#9330)
+- Support copy paste based on bbox when there is no gt mask (#8905)
+- Make scipy as a default dependency in runtime (#9186)
+
+#### Documents
+
+- Delete redundant Chinese characters in docs (#9175)
+- Add MMEval in README (#9217)
+
+#### Contributors
+
+A total of 11 developers contributed to this release.
+Thanks @wangjiangben-hw, @motokimura, @AdorableJiang, @BainOuO, @JarvisKevin, @wanghonglie, @zytx121, @BIGWangYuDong, @hhaAndroid, @RangiLyu, @ZwwWayne
+
 ### v2.25.3 (25/10/2022)
 
 #### Bug Fixes
